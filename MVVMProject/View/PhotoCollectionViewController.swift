@@ -52,7 +52,13 @@ extension PhotoCollectionViewController: UICollectionViewDelegate, UICollectionV
         }
 
         let photo = self.photos[indexPath.row]
+        let url = URL(string: photo.thumbnailUrl)!
+        cell.bgImgView.af.setImage(withURL: url)
+        
+        cell.idLabel.text = "\(photo.id)";
         cell.titleLabel.text = photo.title;
+        
+//        cell.titleLabel.text = photo.title;
         return cell;
     }
     
@@ -64,35 +70,6 @@ extension PhotoCollectionViewController: UICollectionViewDelegate, UICollectionV
         return self.photos.count;
     }
 }
-//extension PhotoCollectionViewController: UITableViewDelegate, UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhotoCellId", for: indexPath) as? PhotoListTableViewCell else {
-//            fatalError("Cell does not exists")
-//        }
-//
-//        let photo = self.photos[indexPath.row]
-//        cell.nameLabel.text = photo.title;
-//
-//        return cell;
-//    }
-//
-//    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-//        self.selectedIndexPath = indexPath;
-//        return indexPath;
-//    }
-//
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 1;
-//    }
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return self.photos.count;
-//    }
-//
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 150;
-//    }
-//}
 
 extension PhotoCollectionViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -105,32 +82,7 @@ extension PhotoCollectionViewController {
 }
 
 class PhotoCollectionCell: UICollectionViewCell {
-//    @IBOutlet weak var bgImgView: UIImageView!
-//    @IBOutlet weak var idLabel: UILabel!
-    var imageView:UIImageView!
-    var titleLabel:UILabel!
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-
-        // 取得螢幕寬度
-        let w = Double(UIScreen.main.bounds.size.width)
-
-        // 建立一個 UIImageView
-        imageView = UIImageView(frame: CGRect(
-          x: 0, y: 0,
-          width: w/4 - 10.0, height: w/4 - 10.0))
-        self.addSubview(imageView)
-
-        // 建立一個 UILabel
-        titleLabel = UILabel(frame:CGRect(
-          x: 0, y: 0, width: w/4 - 10.0, height: 40))
-        titleLabel.textAlignment = .center
-//            titleLabel.textColor = UIColor.orangeColor()
-        self.addSubview(titleLabel)
-    }
-
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    @IBOutlet weak var bgImgView: UIImageView!
+    @IBOutlet weak var idLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
 }

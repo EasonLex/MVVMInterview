@@ -22,7 +22,6 @@
 		E7C355E225E39B2E0043A902 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C355E125E39B2E0043A902 /* PhotoDetailViewController.swift */; };
 		E7C355E825E39BD50043A902 /* photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C355E725E39BD50043A902 /* photo.swift */; };
 		E7C355F125E3A6420043A902 /* ApiFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C355F025E3A6420043A902 /* ApiFetch.swift */; };
-		E7C355F925E3AA590043A902 /* content.json in Resources */ = {isa = PBXBuildFile; fileRef = E7C355F825E3AA590043A902 /* content.json */; };
 		E7C3560625E48D2E0043A902 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C3560525E48D2E0043A902 /* PhotoCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,7 +69,6 @@
 		E7C355E125E39B2E0043A902 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
 		E7C355E725E39BD50043A902 /* photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photo.swift; sourceTree = "<group>"; };
 		E7C355F025E3A6420043A902 /* ApiFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiFetch.swift; sourceTree = "<group>"; };
-		E7C355F825E3AA590043A902 /* content.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = content.json; sourceTree = "<group>"; };
 		E7C3560525E48D2E0043A902 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
 		E8141485CB9AD617A5239E38 /* Pods_MVVMProject_MVVMProjectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVVMProject_MVVMProjectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -192,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				E7C355F025E3A6420043A902 /* ApiFetch.swift */,
-				E7C355F825E3AA590043A902 /* content.json */,
 			);
 			path = ApiFetchServices;
 			sourceTree = "<group>";
@@ -321,7 +318,6 @@
 				E7C3559C25E389220043A902 /* LaunchScreen.storyboard in Resources */,
 				E7C3559925E389220043A902 /* Assets.xcassets in Resources */,
 				E7C3559725E389200043A902 /* Main.storyboard in Resources */,
-				E7C355F925E3AA590043A902 /* content.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
